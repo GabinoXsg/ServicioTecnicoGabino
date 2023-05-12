@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios Técnicos</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <style>
+    @media (max-width: 600px) {
+      section {
+        width: 100%;
+      }
+    }
+    
+    .servicio {
+      display: block;
+      margin-bottom: 20px;
+    }
+    
+    .servicios-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .disclaimer {
+      text-align: center;
+      font-style: italic;
+      margin-top: 20px;
+    }
+    
+    /* Estilos adicionales para la visualización en la PC */
+    @media (min-width: 601px) {
+      .servicios-container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Servicios Técnicos</h1>
+  </header>
+  
+  <main>
+    <div class="servicios-container">
+      <section class="servicio">
+        <h2>Reacondicionamiento / Limpieza de PC</h2>
+        <p>Demora: 48 horas</p>
+        <p>Precio: $6000</p>
+        <button onclick="comprarServicio('limpieza')">Comprar</button>
+      </section>
+      
+      <section class="servicio">
+        <h2>Armado de PC</h2>
+        <p>Demora: 48 horas</p>
+        <p>Precio: $4500</p>
+        <button onclick="comprarServicio('armado')">Comprar</button>
+      </section>
+      
+      <section class="servicio">
+        <h2>Instalación de Componentes</h2>
+        <p>Demora: 90 minutos</p>
+        <p>Precio: $2000</p>
+        <button onclick="comprarServicio('instalacion')">Comprar</button>
+      </section>
+      
+      <section class="servicio">
+        <h2>Instalación de Windows / Formateo + Instalación</h2>
+        <p>Demora: 24 horas</p>
+        <p>Precio: $2500</p>
+        <button onclick="comprarServicio('windows')">Comprar</button>
+      </section>
+      
+      <section class="servicio">
+        <h2>Instalación de Paquete Office Full</h2>
+        <p>Demora: 60 minutos</p>
+        <p>Precio: $1500</p>
+        <button onclick="comprarServicio('office')">Comprar</button>
+      </section>
+      
+      <section class="servicio">
+        <h2>Configuración / Instalación de Software</h2>
+        <p>Demora: 60 minutos</p>
+        <p>Precio: $1500</p>
+        <button onclick="comprarServicio('configuracion')">Comprar</button>
+      </section>
+    </div>
+</main>
+
+<footer>
+  <p class="disclaimer">* Los costos de los materiales se calculan aparte y pueden variar según el servicio específico.</p>
+  <p>Derechos reservados &copy; 2023</p>
+</footer>
+
+<script>
+  function comprarServicio(servicio) {
+    var numeroWhatsApp = "2616915325";
+    var mensajeWhatsApp = "¡Hola! Estoy interesado en el servicio de " + servicio;
+    var urlWhatsApp = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(mensajeWhatsApp);
+    window.location.href = urlWhatsApp;
+  }
+</script>
+</body>
+</html>
+
